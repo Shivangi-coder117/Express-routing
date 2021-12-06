@@ -30,7 +30,7 @@ app.use(express.urlencoded());
 
 app.use(cookieParser());
 
-app.use(express.static('./assets'));
+app.use(express.static('./assests'));
 
 app.use(expressLayouts);
 // extract style and scripts from sub pages into the layout

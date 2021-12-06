@@ -1,5 +1,27 @@
 body {
   margin: 0;
-  background-color: lightblue; }
+  background: -webkit-linear-gradient(coral, darkslateblue); }
   body #layout-main {
-    height: 100%; }
+    height: 85vh;
+    text-align: center; }
+    body #layout-main form {
+      text-align: center;
+      justify-items: center; }
+      body #layout-main form input {
+        display: block;
+        justify-content: center;
+        margin-left: 42%;
+        margin-bottom: 2%;
+        border: 1px solid grey;
+        border-radius: 8px;
+        padding: 8px;
+        width: 15rem;
+        line-height: 20px; }
+      body #layout-main form #button_submit {
+        border: 1px solid red;
+        width: 5rem;
+        margin-left: 48%;
+        cursor: pointer; }
+      body #layout-main form #button_submit:hover {
+        color: whitesmoke;
+        background-color: black; }
