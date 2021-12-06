@@ -1,0 +1,15 @@
+#feed-post {
+  padding: 10px; }
+  #feed-post textarea {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px; }
+  #feed-post #button_post {
+    border: 1px solid red;
+    width: 5rem;
+    margin-left: 47%;
+    cursor: pointer;
+    margin-top: 20px; }
+  #feed-post #button_post:hover {
+    color: whitesmoke;
+    background-color: black; }
