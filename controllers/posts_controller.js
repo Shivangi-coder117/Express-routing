@@ -18,7 +18,7 @@ module.exports.create = function(req,res)
 
 module.exports.destroy = function(req,res)
 {
-  Post.findById(req.paramas.id,function(err,post){
+  Post.findById(req.params.id,function(err,post){
       //.id means converting obj id to string
       if(post.user == req.user.id)
       {
