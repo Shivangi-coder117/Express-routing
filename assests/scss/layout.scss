@@ -40,6 +40,17 @@ body{
             color: whitesmoke;
             background-color:black;
         }
+        .post-comments
+        {
+            input {
+                justify-content: left;
+                margin-left: 20%;;
+            }
+            #comment-here
+            {
+                width:2rem;
+            }
+        }
        
 
     

@@ -25,3 +25,8 @@ body {
       body #layout-main form #button_submit:hover {
         color: whitesmoke;
         background-color: black; }
+      body #layout-main form .post-comments input {
+        justify-content: left;
+        margin-left: 20%; }
+      body #layout-main form .post-comments #comment-here {
+        width: 2rem; }
