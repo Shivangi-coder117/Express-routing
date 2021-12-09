@@ -1,0 +1,32 @@
+form{
+    text-align: center;
+    justify-items: center;
+    
+
+input{
+    display: block;
+    justify-content: center;
+    margin-left: 42%;
+    margin-bottom: 2%;
+    border:1px solid grey;
+    border-radius: 8px;
+    padding:8px;
+    width:15rem;
+
+    
+    line-height: 20px;
+
+}    
+
+#button_submit
+{
+    border: 1px solid red;
+    width:5rem;
+    margin-left: 48%;
+    cursor: pointer;
+}
+#button_submit:hover
+{
+    color: whitesmoke;
+    background-color:black;
+}}

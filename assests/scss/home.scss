@@ -1,26 +1,46 @@
-#feed-post
+#home-container
 {
-    padding:10px;
-    
-   textarea
-   {
-    border:1px solid grey;
-    border-radius: 5px;
-    padding:10px;
-   }
+    display:flex;
 
+    #feed-post
+    {
+        width :70%;
+        padding:10px;
+    }
+    #posts-container
+    {
+        li {
+           list-decoration:none;
+        }
+        a 
+        {
+            text-decoration: none;
+            color:rgb(197, 250, 3); 
+        }
+    }
     #button_post
     {
         border: 1px solid red;
-        width:5rem;
-        margin-left: 47%;
+        border-radius: 5px;
+        
+       
         cursor: pointer;
-        margin-top: 20px;
     }
     #button_post:hover
     {
         color: whitesmoke;
         background-color:black;
     }
-     
+    #user-friends
+    {
+        
+        width :30%;
+        padding:10px;
+        border-left: 1px solid lightgrey;
+
+        a{
+            text-decoration: none;
+            color:white;
+        }
+    }
 }
