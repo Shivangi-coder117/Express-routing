@@ -3,8 +3,6 @@
   #home-container #feed-post {
     width: 70%;
     padding: 10px; }
-  #home-container #posts-container li {
-    list-decoration: none; }
   #home-container #posts-container a {
     text-decoration: none;
     color: #c5fa03; }
