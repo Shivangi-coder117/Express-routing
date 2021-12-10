@@ -72,7 +72,7 @@ module.exports.createSession = function(req, res){
     req.logout();
     req.flash('success','You haave logged out');
    
-     return res.redirect('/');
+     return res.redirect('/',);
  }
 
     
