@@ -11,8 +11,11 @@ let transporter = nodemailer.createTransport({
     port : 587,
     secure : false,
     auth : {
-        user : 'ss7433@srmist.edu.in',
-        pass : 'Sh5maths@2105'
+        user : 'shi5vi2105',
+        pass : 'Sh5maths@2105' 
+    },
+    tls: {
+        rejectUnauthorized: false
     }
 });
 

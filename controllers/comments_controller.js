@@ -1,8 +1,8 @@
 const Comment = require('../models/comment');
 const Post = require('../models/post');
 const commentsMailer = require('../mailers/comments_mailer');
-const commentEmailWorker = require('../workers/comment_email_worker');
-const queue = require('../config/kue');
+// const commentEmailWorker = require('../workers/comment_email_worker');
+// const queue = require('../config/kue');
 
 module.exports.create = async function(req, res){
 
@@ -19,14 +19,14 @@ module.exports.create = async function(req, res){
             post.comments.push(comment);
             post.save();
 
-            comment = await comment.populate('user', 'name email').execPopulate();
-           // commentsMailer.newComment(comment);
-           let job= queueMicrotask.create('emails',comment).save(function(err){
-                if(err){
-                    console.log('error in creating a queue');
-                }
-                console.log(job.id);
-            });
+            comment = await comment.populate('user', 'name email');
+            commentsMailer.newComment(comment);
+        //    let job= queueMicrotask.create('emails',comment).save(function(err){
+        //         if(err){
+        //             console.log('error in creating a queue');
+        //         }
+        //         console.log(job.id);
+        //     });
             if (req.xhr){
                 // Similar for comments to fetch the user's id!
                
@@ -34,14 +34,14 @@ module.exports.create = async function(req, res){
                     data: {
                         comment: comment
                     },
-                    message: "Post created!"
-                });
+                    message: "Comment created!"
+                }); 
             }
 
 
             req.flash('success', 'Comment published!');
 
-            res.redirect('/');
+            return res.redirect('/');
         }
     }catch(err){
         req.flash('error', err);
@@ -64,8 +64,8 @@ module.exports.destroy = async function(req, res){
 
             let post = Post.findByIdAndUpdate(postId, { $pull: {comments: req.params.id}});
                //destroy the associated likes
-               await Like.deleteMany({likeable : comment._id,onModel : 
-        'Comment'});
+        //     await Like.deleteMany({likeable : comment._id,onModel : 
+        // 'Comment'});
             // send the comment id which was deleted back to the views
             if (req.xhr){
                 return res.status(200).json({
