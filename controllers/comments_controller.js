@@ -70,9 +70,10 @@ module.exports.destroy = async function(req, res){
             if (req.xhr){
                 return res.status(200).json({
                     data: {
+                        comment_user: comment.user,
                         comment_id: req.params.id
                     },
-                    message: "Post deleted"
+                    message: "Comment deleted"
                 });
             }
 

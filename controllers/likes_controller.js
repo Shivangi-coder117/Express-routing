@@ -23,7 +23,7 @@ module.exports.toggleLike = async function(req,res){
         })
 //if like already exists delete it
        if(existingLike){
-           likeable.likes.pull(existingLike,_id);
+           likeable.likes.pull(existingLike._id);
            likeable.save();
 
            existingLike.remove();
